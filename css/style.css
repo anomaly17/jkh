@@ -325,3 +325,28 @@ textarea {
     font-size: 28px;
     font-weight: 600;
 }
+
+.adviceDetal__text {
+    color: #76D6FF;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    padding-top: 30px;
+}
+
+.info p{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+}
+
+.info h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 0;
+}
