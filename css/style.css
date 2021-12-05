@@ -98,13 +98,12 @@ textarea {
 
 /*--------------------*/
 
-.login__component {
+.component {
     height: 100vh;
     display: flex;
 }
 
-
-.login__left {
+.left {
     height: 100%;
     width: 60%;
     display: flex;
@@ -114,7 +113,7 @@ textarea {
     
 }
 
-.login__right{
+.right{
     height: 100%;
     background-color: #76D6FF;
     width: 40%;
@@ -166,7 +165,8 @@ textarea {
 
 .left__password a {
     font-weight: 600;
-    color: #000000;
+    color: #000000; 
+    margin-left: 3px;
 }
 
 .right__text {
@@ -201,3 +201,9 @@ textarea {
 .login__right_mix {
     margin-left: 40px;
 }
+
+
+
+
+
+
