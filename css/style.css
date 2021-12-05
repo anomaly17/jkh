@@ -308,3 +308,20 @@ textarea {
     align-items: center;
     padding-top: 10px;
 }
+
+.advice__btn button {
+    width: 400px;
+    height: 200px;
+    background-color: #76D6FF;
+    border-radius: 4px;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.advice__btn button div{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
