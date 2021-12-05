@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+textarea {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/*--------------------*/
+
+.login__component {
+    height: 100vh;
+    display: flex;
+}
+
+
+.login__left {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.login__right{
+    height: 100%;
+    background-color: #76D6FF;
+    width: 40%;
+}
+
+.left__text {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.left__btn{
+    width: 480px;
+    height: 48px;
+    background-color: #76D6FF;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 480px;
+    height: 48px;
+    background: #FAFAFA;
+    padding-left: 22px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.login__input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__input input {
+    margin-bottom: 15px;
+}
+
+.left__password {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.left__password a {
+    font-weight: 600;
+    color: #000000;
+}
+
+.right__text {
+    color: #ffffff;
+    font-size: 166px;
+    font-weight: 900;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.right__text span:nth-child(1) {
+    line-height: 0.5;
+    margin-left: 90px;
+}
+
+.right__btns{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.right__btns button {
+    background: none;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.login__right_mix {
+    margin-left: 40px;
+}
