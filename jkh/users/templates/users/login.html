@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="login__component component">
+        <div class="left">
+            <div class="login__contentLeft">
+                <div class="left__text">Вход в систему</div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="login__input">
+                        <label><input type="text" name="username" placeholder="E-mail" class="input" required></label>
+                        <input type="password" name="password" placeholder="Пароль" class="input" required>
+                    </div>
+                    {% for error in form.errors.values %}
+                        <ul>
+                            <li>{{ error }}</li>
+                        </ul>
+                    {% endfor %}
+                    <button class="left__btn" type="submit">Войти</button>
+                    <div class="left__password">Забыли пароль? <a href="#">Восстановить</a></div>
+                    <div class="left__password">
+                        <a href="{% url 'users:signup' %}">Зарегистрироваться</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <div class="login__right_mix">
+                <h1 class="right__text"><span>Оплата</span><span>ЖКХ</span></h1>
+                <div class="right__btns">
+                    <button class="microphone"><img src="{% static 'img/microphone.svg' %}" alt="microphone">Голосовой
+                        помощник</button>
+                    <button class="adjust"><img src="{% static 'img/adjust.svg' %}" alt="">Контрастный интерфейс</button>
+                    <button class="search"><img src="{% static 'img/search.svg' %}" alt="">Лупа</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

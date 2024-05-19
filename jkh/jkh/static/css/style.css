@@ -217,7 +217,7 @@ textarea {
     font-size: 48px;
 }
 
-.buttons__pay button{
+.buttons__pay button, .buttons__pay a {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -244,6 +244,12 @@ textarea {
 .header a {
     color: black;
     font-size: 24px
+}
+
+.header button {
+    color: black;
+    font-size: 24px;
+    background: transparent;
 }
 
 .header__logout{

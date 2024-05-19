@@ -1,0 +1,51 @@
+{% extends 'shell.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="main__component">
+        <a href="{% url 'home' %}"><img src="{% static 'img/back.svg' %}" alt="back" class="back"></a>
+        <div class="left__personalAccount">
+            <div class="left__text">Личный кабинет</div>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="login__input">
+                    <input type="text" name="last_name" placeholder="Фамилия" value="{{ form.last_name.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="first_name" placeholder="Имя" value="{{ form.first_name.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="patronymic" placeholder="Отчество" value="{{ form.patronymic.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="email" placeholder="E-mail" value="{{ form.email.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="gas_account" placeholder="Лицевой счёт по газоснобжению" value="{{ form.gas_account.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="electricity_account" placeholder="Лицевой счёт по электроснобжению" value="{{ form.electricity_account.value|default_if_none:'' }}" class="input">
+                    <input type="text" name="water_account" placeholder="Лицевой счёт по водоснобжению" value="{{ form.water_account.value|default_if_none:'' }}" class="input">
+                    {% for error in form.errors.values %}
+                        <ul>
+                            <li>{{ error }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+                <button class="left__btn" type="submit">Сохранить</button>
+            </form>
+            <div class="left__text">Смена пароля</div>
+            <form action="{% url 'users:profile_change_password' %}" method="post">
+                {% csrf_token %}
+                <div class="login__input">
+                    <input type="password" name="new_password1" placeholder="Новый пароль" class="input">
+                    <input type="password" name="new_password2" placeholder="Повторите пароль" class="input">
+                    {% for error in form.errors.values %}
+                        <ul>
+                            <li>{{ error }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+                <button class="left__btn" type="submit">Сохранить</button>
+            </form>
+        </div>
+        <div class="right__payDetal">
+            <div class="buttons__payDetal">
+                <button><img src="{% static 'img/microphone.svg' %}" alt="microphone">Голосовой помощник</button>
+                <button><img src="{% static 'img/adjust.svg' %}" alt="">Контрастный интерфейс</button>
+                <button><img src="{% static 'img/search.svg' %}" alt="">Лупа</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

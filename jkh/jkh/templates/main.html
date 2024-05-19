@@ -1,0 +1,29 @@
+{% extends 'shell.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="main__component">
+        <div class="left__main">
+            <div class="left__text">Оплата услуг</div>
+            <div class="buttons__pay">
+                <a href="{% url 'debts:debt_payment' 'gas' %}">Оплатить газ<img src="{% static 'img/fire.svg' %}" alt="fire"></a>
+                <a href="{% url 'debts:debt_payment' 'electricity' %}">Оплатить свет<img src="{% static 'img/bulb.svg' %}" alt="bulb"></a>
+                <a href="{% url 'debts:debt_payment' 'water' %}">Оплатить воду<img src="{% static 'img/water.svg' %}" alt="water"></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="login__right_mix">
+                <div class="links">
+                    <a href="{% url 'users:profile_change' %}">Личный кабинет</a>
+                    <a href="{% url 'advice' %}">Советы</a>
+                </div>
+                <div class="right__btns">
+                    <button class="microphone"><img src="{% static 'img/microphone.svg' %} " alt="microphone">Голосовой
+                        помощник</button>
+                    <button class="adjust"><img src="{% static 'img/adjust.svg' %} " alt="">Контрастный интерфейс</button>
+                    <button class="search"><img src="{% static 'img/search.svg' %} " alt="">Лупа</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

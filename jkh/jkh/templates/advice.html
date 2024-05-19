@@ -1,0 +1,48 @@
+{% extends 'shell.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="main__component">
+        <a href="{% url 'home' %}"><img src="{% static 'img/back.svg' %}" alt="back" class="back"></a>
+        <div class="left__main">
+            <div class="left__text">Советы</div>
+            <div class="advice__btns">
+                <div class="advice__btn">
+                    <a href="/advices/benefits/">
+                        <button>
+                            <div>Льготы участникам
+                                ВОВ</div>
+                        </button>
+                    </a>
+                    <a href="/advices/benefits/">
+                        <button>
+                            <div>Льготы участникам
+                                ВОВ</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="advice__btn">
+                    <a href="/advices/benefits/">
+                        <button>
+                            <div>Льготы участникам
+                                ВОВ</div>
+                        </button>
+                    </a>
+                    <a href="/advices/benefits/">
+                        <button>
+                            <div>Льготы участникам
+                                ВОВ</div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right__payDetal">
+            <div class="buttons__payDetal">
+                <button><img src="{% static 'img/microphone.svg' %}" alt="microphone">Голосовой помощник</button>
+                <button><img src="{% static 'img/adjust.svg' %}" alt="">Контрастный интерфейс</button>
+                <button><img src="{% static 'img/search.svg' %}" alt="">Лупа</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

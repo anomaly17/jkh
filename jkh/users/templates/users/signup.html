@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="registration__component component">
+        <div class="left">
+            <div class="left__text">Регистрация</div>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="login__input">
+                    <input type="text" name="last_name" placeholder="Фамилия" class="input">
+                    <input type="text" name="first_name" placeholder="Имя" class="input">
+                    <input type="text" name="patronymic" placeholder="Отчество" class="input">
+                    <input type="text" name="email" placeholder="E-mail" class="input">
+                    <input type="password" name="password1" placeholder="Пароль" class="input">
+                    <input type="password" name="password2" placeholder="Повторите пароль" class="input">
+                    {% for error in form.errors.values %}
+                        <ul>
+                            <li>{{ error }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+                <button class="left__btn" type="submit">Зарегистрироваться</button>
+                <div class="left__password">Есть аккаунт? <a href="{% url 'users:login' %}">Войти</a></div>
+            </form>
+        </div>
+        <div class="right">
+            <div class="login__right_mix">
+                <h1 class="right__text"><span>Оплата</span><span>ЖКХ</span></h1>
+                <div class="right__btns">
+                    <button class="microphone"><img src="{% static 'img/microphone.svg' %}" alt="microphone">Голосовой
+                        помощник</button>
+                    <button class="adjust"><img src="{% static 'img/adjust.svg' %}" alt="">Контрастный интерфейс</button>
+                    <button class="search"><img src="{% static 'img/search.svg' %}" alt="">Лупа</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'shell.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <header class="header">
-        <a href="#" class="header__text">Оплата ЖКХ</a>
-        <a href="#" class="header__logout">Выйти</a>
-    </header>
-    <div class="main__component">
-        <img src="../img/back.svg" alt="back" class="back">
-        <div class="left__main">
-            <h1 class="adviceDetal__text">Льготы военнослужащим</h1>
-            <div class="info">
+{% block content %}
+<div class="main__component">
+    <a href="{% url 'advice' %}"><img src="{% static 'img/back.svg' %}" alt="back" class="back"></a>
+    <div class="left__main">
+        <h1 class="adviceDetal__text">Льготы военнослужащим</h1>
+        <div class="info">
             <p>
                 Большая часть прав и льгот военнослужащих определена федеральным законом «О статусе военнослужащих»,
                 действующим с 27 мая 1998 года, поправки в который вносятся не реже двух раз в год. Самые последние
@@ -43,15 +31,13 @@
                 - получение и отправление посылок с личными вещами за счет федеральных средств.
             </p>
         </div>
+    </div>
+    <div class="right__payDetal">
+        <div class="buttons__payDetal">
+            <button><img src="{% static 'img/microphone.svg' %}" alt="microphone">Голосовой помощник</button>
+            <button><img src="{% static 'img/adjust.svg' %}" alt="">Контрастный интерфейс</button>
+            <button><img src="{% static 'img/search.svg' %}" alt="">Лупа</button>
         </div>
-        <div class="right__payDetal">
-            <div class="buttons__payDetal">
-                <button><img src="../img/microphone.svg" alt="microphone">Голосовой помощник</button>
-                <button><img src="../img/adjust.svg" alt="">Контрастный интерфейс</button>
-                <button><img src="../img/search.svg" alt="">Лупа</button>
-            </div>
-        </div>
-
-</body>
-
-</html>
+    </div>
+</div>
+{% endblock %}
